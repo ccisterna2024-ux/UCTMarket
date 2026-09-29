@@ -1,0 +1,124 @@
+ScreenManager:
+
+    LoginScreen:
+        name: "login"
+
+    PrincipalScreen:
+        name: "principal"
+
+    PerfilScreen:
+        name: "perfil"
+
+    <LoginScreen>:
+
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: "40dp"
+        spacing: "25dp"
+
+        MDLabel:
+            text: "Marketplace UCT"
+            halign: "center"
+            font_style: "Headline"
+
+        MDLabel:
+            text: "Compra, vende e intercambia dentro de la comunidad universitaria"
+            halign: "center"
+
+        MDTextField:
+            id: nombre
+            hint_text: "Ingresa tu nombre"
+            mode: "outlined"
+
+        MDRaisedButton:
+            text: "Ingresar"
+            pos_hint: {"center_x": 0.5}
+            on_release: root.ingresar()
+
+    <PrincipalScreen>:
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDTopAppBar:
+            title: "Marketplace UCT"
+
+        MDTextField:
+            hint_text: "Buscar productos..."
+            mode: "outlined"
+            size_hint_y: None
+            height: "60dp"
+
+        MDLabel:
+            text: "Publicaciones recientes"
+            font_style: "Title"
+            padding: "20dp", "10dp"
+
+        MDCard:
+            orientation: "vertical"
+            padding: "15dp"
+            size_hint_y: None
+            height: "180dp"
+
+            MDLabel:
+                text:  "iPhone 12"
+                font_style: "Title"
+
+            MDLabel:
+                text: "$250.000"
+
+            MDLabel:
+                text: "Publicado por estudiante UCT"
+
+        MDCard:
+            orientation: "vertical"
+            padding: "15dp"
+            size_hint_y: None
+            height: "180dp"
+
+            MDLabel:
+                text:  "Libros de calculo"
+                font_style: "Title"
+
+            MDLabel:
+                text: "$15.000"
+
+            MDLabel:
+                text: "Publicado por estudiante UCT"
+
+        Widget:
+
+        MDButton:
+            text: "Ver perfil"
+            pos_hint: {"center_x": 0.5}
+            on_release: root.manager.current = "perfil"
+
+    <PerfilScreen>:
+
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: "30dp"
+        spacing: "20dp"
+
+        MDTopAppBar:
+            title: "Mi perfil"
+
+        MDLabel:
+            text: 
+            halign: "center"
+            font_size: "60sp"
+
+        MDLabel:
+            id: nombre_perfil
+            text: "Usuario"
+            halign: "center"
+            font_style: "Headline"
+
+        MDButton:
+            text: "Mis publicaciones"
+            pos_hint: {"center_x": 0.5}
+
+        MDButton:
+            text: "Volver al Marketplace"
+            pos_hint: {"center_x": 0.5}
+            on_release: root.manager.current = "principal"
