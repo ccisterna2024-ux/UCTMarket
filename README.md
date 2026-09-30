@@ -29,17 +29,18 @@ Activa el entorno virtual:
 .\venv\Scripts\Activate.ps1
 ```
 
-Si PowerShell bloquea la activación, habilita scripts solo para la sesión actual y vuelve a intentarlo:
+Si PowerShell bloquea la activación habilita scripts solo para la sesión actual con el siguiente comando, y vuelve a intentar el comando anterior:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\venv\Scripts\Activate.ps1
 ```
 
 Instala las dependencias:
 
 ```powershell
 python -m pip install --upgrade pip
+```
+```powershell
 python -m pip install -r requirements.txt
 ```
 
