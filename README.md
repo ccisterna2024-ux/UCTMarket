@@ -40,5 +40,5 @@ Ejecución
 2. Abrir una terminal dentro de la carpeta del proyecto.
 3. Ejecutar el siguiente comando:
 
-```bash
+bash
 python main.py
