@@ -9,7 +9,7 @@ ScreenManager:
     PerfilScreen:
         name: "perfil"
 
-    <LoginScreen>:
+<LoginScreen>:
 
     MDBoxLayout:
         orientation: "vertical"
@@ -30,18 +30,23 @@ ScreenManager:
             hint_text: "Ingresa tu nombre"
             mode: "outlined"
 
-        MDRaisedButton:
+        MDButton:
             text: "Ingresar"
             pos_hint: {"center_x": 0.5}
             on_release: root.ingresar()
 
-    <PrincipalScreen>:
+<PrincipalScreen>:
 
     MDBoxLayout:
         orientation: "vertical"
 
         MDTopAppBar:
             title: "Marketplace UCT"
+        
+        MDLabel:
+            id: bienvenida
+            text: "Bienvenido"
+            halign: "center"
 
         MDTextField:
             hint_text: "Buscar productos..."
@@ -93,7 +98,7 @@ ScreenManager:
             pos_hint: {"center_x": 0.5}
             on_release: root.manager.current = "perfil"
 
-    <PerfilScreen>:
+<PerfilScreen>:
 
     MDBoxLayout:
         orientation: "vertical"
