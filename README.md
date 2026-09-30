@@ -17,10 +17,15 @@ git clone https://github.com/vicentemauricio2002-sudo/UCTMarket.git
 cd UCTMarket
 ```
 
-Crea y activa un entorno virtual:
+Crea un entorno virtual:
 
 ```powershell
 py -3.11 -m venv venv
+```
+
+Activa el entorno virtual:
+
+```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
